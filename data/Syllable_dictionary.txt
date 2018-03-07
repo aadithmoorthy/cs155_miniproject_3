@@ -122,6 +122,7 @@ anon 2
 another E2 3
 another's 3
 answer 2
+answered 2
 answers 2
 anticipate 4
 antique 2
@@ -665,6 +666,7 @@ defendant 3
 define 2
 deformed'st 2
 defy 2
+delayed 2
 delight 2
 delighted E2 3
 delights 2
@@ -698,6 +700,7 @@ despised E2 3
 despising E2 3
 despite 2
 destroys 2
+detain 2
 determinate 4
 determination 5
 determined 4
@@ -991,6 +994,7 @@ female 2
 fester 2
 fever E1 2
 few 1
+fickle 2
 field 1
 fiend 1
 fierce 1
@@ -1168,6 +1172,7 @@ go 1
 god 1
 goddess 2
 goes 1
+goest 1
 going 2
 gold 1
 golden 2
@@ -1207,6 +1212,7 @@ grind 1
 groan 1
 groans 1
 gross 1
+grossly 2
 ground 1
 grounded 2
 grow 1
@@ -1699,6 +1705,7 @@ mind's 1
 minded 2
 minds 1
 mine 1
+minion 2
 minutes 2
 miracle 3
 miscalled 2
@@ -1855,6 +1862,7 @@ one 1
 only 2
 onset 2
 onward 2
+onwards 2
 open E1 2
 oppressed 2
 oppression 3
@@ -1876,6 +1884,7 @@ outright 2
 outstripped 2
 outward 2
 outworn 2
+over 2
 over-goes 3
 over-partial 4
 over-plus 3
@@ -2110,6 +2119,7 @@ quick 1
 quicker 2
 quickly 2
 quiet 2
+quietus 3
 quill 1
 quite 1
 race 1
@@ -2396,6 +2406,7 @@ short-numbered 3
 should 1
 shouldst 1
 show 1
+show'st 1
 showers 1
 showing 2
 shown 1
@@ -2983,6 +2994,7 @@ walls 1
 wand'rest 2
 wand'ring 2
 wane 1
+waning 2
 want 1
 wanting E1 2
 wanton 2
@@ -3104,6 +3116,7 @@ wishing 2
 wit 1
 with 1
 withal 2
+withering 2
 within 2
 without 2
 witness 2
@@ -3153,6 +3166,7 @@ would 1
 wouldst 1
 wound 1
 wounded 2
+wrack 1
 wrackful 2
 wrecked 1
 wretch 1

@@ -35,17 +35,51 @@ def readInSyllableCounts(filepath):
         syllableDict[elements[0]] = elements[1:]
     return syllableDict
 
-def readInWords(filepath):
-    f = open(filepath, 'r')
-    lines = f.readlines()
-    wordStateBiDict = {}
-    ind = 0
-    for line in lines:
-        word = line.split()[0]
-        wordStateBiDict[word] = ind
-        wordStateBiDict[ind] = word
-        ind +=1
-    return wordStateBiDict
+def buildRhymingDict(sonnets):
+    rhymingDict = {}
+    for ind in range(len(sonnets)):
+        sonnet = sonnets[ind]
+        # Find all pairs of words used in rhymes
+        endingWords = [line[-1] for line in sonnet]
+        rhymePairs = []
+        if (ind != 98) and (ind != 125):
+            # Standard sonnet and rhyming scheme
+            for i in range(3):
+                # Rhyming pairs for the three stanzas
+                rhymePairs.append([endingWords[4*i], endingWords[4*i+2]])
+                rhymePairs.append([endingWords[4*i+1], endingWords[4*i+3]])
+            # Rhyming pair for the ending couplet
+            rhymePairs.append([endingWords[12], endingWords[13]])
+        elif (ind == 98):
+            # This sonnet is unusual in that the first stanza
+            # has five lines and has a rhyming triplet
+            rhymePairs.append([endingWords[0], endingWords[2]])
+            rhymePairs.append([endingWords[2], endingWords[4]])
+            rhymePairs.append([endingWords[0], endingWords[4]])
+            rhymePairs.append([endingWords[1], endingWords[3]])
+            for i in range(1,3):
+                # Rhyming pairs for the two normal stanzas
+                rhymePairs.append([endingWords[4*i+1], endingWords[4*i+3]])
+                rhymePairs.append([endingWords[4*i+2], endingWords[4*i+4]])
+            # Rhyming pair for the ending couplet
+            rhymePairs.append([endingWords[13], endingWords[14]])
+        elif (ind == 125):
+            # This sonnet is only twelve lines and consists 
+            # purely of couplets
+            for i in range(6):
+                rhymePairs.append([endingWords[2*i], endingWords[2*i+1]])
+        # Store rhyming pairs in the dictionary
+        for word1, word2 in rhymePairs:
+            if word1 not in rhymingDict:
+                rhymingDict[word1] = set([word2])
+            else:
+                rhymingDict[word1].add(word2)
+            if word2 not in rhymingDict:
+                rhymingDict[word2] = set([word1])
+            else:
+                rhymingDict[word2].add(word1)
+    # Rhyming Dictionary is now populated
+    return rhymingDict
 
 def labelSonnetSyllables(sonnet, syllableDict):
     syllablesByLine = []
